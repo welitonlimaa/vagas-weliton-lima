@@ -1,4 +1,10 @@
-var data =  require("./fakeData");
+const data =  require("./fakeData");
+
+// mudança 1: utilizar "var" para declarar uma variável pode causar problemas pois "vaza o escopo"
+// mudei para "const"
+
+// mudança 2: a função getUser pesquisa por um usuário que corresponda a query name,
+// utilizar uma HOF nesse caso melhora a performance e a legibilidade do código
 
 const getUser = ( req, res, _next ) => {
     const name =  req.query.name;
