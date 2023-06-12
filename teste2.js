@@ -7,7 +7,7 @@
 
 // mudança 4: adiciona o id correspondente a essa inserção
 
-// mudança 5: retorna o status da requisição
+// mudança 5: retorna o status da resposta a requisição
 
 // mudança 6: adiciona try catch para captura de erros no servidor
 

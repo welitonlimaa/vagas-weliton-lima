@@ -9,7 +9,7 @@ const researchedNames =  require("./queriesRegistration");
 
 // mudança 3: registra a pesquisa do nome em researchedNames
 
-// mudança 4: retorna o status da requisição
+// mudança 4: retorna o status da resposta a requisição
 
 // mudança 5: adiciona try catch para captura de erros no servidor
 
