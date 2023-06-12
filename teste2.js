@@ -5,14 +5,17 @@
 
 // mudança 3: para confirmar a adição a função sempre retorna o ultimo elemento adicionado em data
 
+// mudança 4: adiciona o id correspondente a essa inserção
+
 const data =  require("./fakeData");
 
 module.exports = function(req, res){
   
     const name =  req.body.name;
     const job =  req.body.job;
-    
+    const id = data.length + 1;
     const newUser = {
+        id, 
         name,
         job,
     }
