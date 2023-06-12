@@ -7,10 +7,14 @@
 
 // mudança 4: adiciona o id correspondente a essa inserção
 
+// mudança 5: retorna o status da requisição
+
+// mudança 6: adiciona try catch para captura de erros no servidor
+
 const data =  require("./fakeData");
 
 module.exports = function(req, res){
-  
+  try {
     const name =  req.body.name;
     const job =  req.body.job;
     const id = data.length + 1;
@@ -22,5 +26,8 @@ module.exports = function(req, res){
 
     data.push(newUser)
     
-    res.send(data[data.length - 1]);
+    res.status(201).send(data[data.length - 1]);
+  } catch (error) {
+    res.status(500).send(error);
+  }
 };
