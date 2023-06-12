@@ -21,8 +21,8 @@ module.exports =  function(req, res) {
     reg.name = name;
     reg.job = job;
 
-    res.status(200).send(reg);
+    return res.status(200).send(reg);
   } catch (error) {
-    res.status(500).send(error);
+    return res.status(500).send(error);
   }
 };

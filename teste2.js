@@ -26,8 +26,8 @@ module.exports = function(req, res){
 
     data.push(newUser)
     
-    res.status(201).send(data[data.length - 1]);
+    return res.status(201).send(data[data.length - 1]);
   } catch (error) {
-    res.status(500).send(error);
+    return res.status(500).send(error);
   }
 };

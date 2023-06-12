@@ -19,17 +19,17 @@ const getUser = ( req, res, _next ) => {
     researchedNames.push({ name, date: Date.now() });
     const result = data.find((user) => user.name == name);
 
-    res.status(200).send(result);
+    return res.status(200).send(result);
   } catch (error) {
-    res.status(500).send(error);
+    return res.status(500).send(error);
   }
 };
 
 const getUsers = ( _req, res, _next ) => {
   try {
-    res.send(data);
+    return res.send(data);
   } catch (error) {
-    res.status(500).send(error);
+    return res.status(500).send(error);
   }
 };
 

@@ -20,9 +20,8 @@ module.exports = function(req, res){
       return acc;
     }, 0)
 
-    res.status(200).send(`Usuário ${name} foi lido ${count} vezes.`);
-
+    return res.status(200).send(`Usuário ${name} foi lido ${count} vezes.`);
   } catch (error) {
-    res.status(500).send(error);
+    return res.status(500).send(error);
   }
 };  

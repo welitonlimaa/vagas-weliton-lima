@@ -19,8 +19,8 @@ module.exports = function(req, res) {
 
     data[index] = null;
 
-    res.status(200).send("success");
+    return res.status(200).send("success");
   } catch (error) {
-    res.status(500).send(error);
+    return res.status(500).send(error);
   }
 };
