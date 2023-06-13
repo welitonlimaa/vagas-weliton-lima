@@ -16,8 +16,11 @@ module.exports =  function(req, res) {
   try {
     const id =  req.query.id;
     const { name, job } = req.body;
-
-    const reg = data.find(d => d.id == id);
+    if (data.length == 0) return res.status(404).send('User not found!');
+    const reg = data.find((d) => {
+      if (d != null) return d.id == id;
+    });
+    if (!reg) return res.status(404).send('User not found!');
     reg.name = name;
     reg.job = job;
 
